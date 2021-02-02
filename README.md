@@ -4,15 +4,15 @@ This a simple blog app made to showcase the mvc framework written in TypeScript.
 
 #### MVC
 
-Each compenent of the framwork can be found in the `src` folder.
+Each compenent of the MVC framework can be found in the `src` folder.
 
 #### OOP
 
-Typescript and Javascript has the classes, but most typescript/javascript takes on a more functional apporach. As for this app I leaned more on the OOP paradigm to fit the specifications.
+Typescript and Javascript has classes, but most typescript/javascript apps take on a more functional approach. As for this app I leaned more on the OOP paradigm to fit the specifications.
 
 #### Singleton
 
-I exported a class instance in my model, routes, and controller files because this is the easiest and mosst straightforward way of implementing a singleton for typescript.
+I exported a class instance in my model, routes, and controller files because this is the easiest and most straightforward way of implementing a singleton for typescript.
 
 ## Setup
 

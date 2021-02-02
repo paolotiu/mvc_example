@@ -34,6 +34,15 @@
     .delete{
         color: red;
     }
+
+    .update{
+        color: orange;
+    }
+
+    .options{
+        display: flex;
+        flex-direction: column;
+    }
 </style>
 
 <section>
@@ -43,11 +52,11 @@
                 <h1 class="title">{{blog.title}}</h1>
                 <small>Author: {{blog.author}}</small>
             </div>
-            <div>
+            <div class="options">
             <a href={{blog.deleteLink}} class="delete">
                 Delete
             </a>
-            <a href={{blog.updateLink}}>
+            <a href={{blog.updateLink}} class="update">
                 Update
             </a>
 
@@ -58,7 +67,7 @@
         </p>
         <small>Published at: {{blog.created}}</small>
     </div>
-    <div>
+    <div style="margin-top: 20px">
         <a href="/blog">
         Return 
         </a>

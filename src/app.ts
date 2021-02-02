@@ -19,7 +19,9 @@ app.set("view engine", "hbs");
 
 // Setup routes
 app.use("/blog", BlogRouter.getRouter());
-
+app.use("/", (req, res) => {
+  res.redirect("/blog");
+});
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404, "Endpoint not found"));

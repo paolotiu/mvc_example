@@ -7,7 +7,7 @@ const app = express();
 import BlogRouter from "./routes/blogRouter";
 
 // Mongoose setup
-import "config/mongooseSetup";
+import "./config/mongooseSetup";
 
 // Setup middlewares
 app.use(express.json());

@@ -1,5 +1,5 @@
 import { RequestHandler } from "express";
-import Blog from "models/Blog";
+import Blog from "../models/Blog";
 interface IBlogController {
   findById: RequestHandler;
   getAllBlogs: RequestHandler;

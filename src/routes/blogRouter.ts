@@ -1,5 +1,5 @@
 import { Router } from "express";
-import blogController from "controllers/blogController";
+import blogController from "../controllers/blogController";
 class BlogRouter {
   public getRouter(): Router {
     const router = Router();

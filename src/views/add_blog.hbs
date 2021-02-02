@@ -1,0 +1,32 @@
+<style>
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5em;
+    }
+    div{
+        margin:  .8em 0;
+    }
+</style>
+
+<form action="/blog" method="POST">
+    <div>
+        <label for="title">Title: </label>
+        <input type="text" name="title">
+    </div>
+    <div>
+        <label for="author">Author: </label>
+        <input type="text" name="author">
+    </div>
+    <div>
+        <p>
+
+        <label for="content">Content: </label>
+        </p>
+        <textarea name="content" cols="30" rows="10"></textarea>
+    </div>
+    <input type="submit">
+</form>

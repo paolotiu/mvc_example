@@ -1,0 +1,66 @@
+<style>
+    section{
+        padding: 3em;
+        display: flex;   
+        align-items: center;
+        flex-direction: column;
+    }
+    .container{
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .title{
+        padding: .4em 0;
+    }
+
+    small{
+        color: gray
+    }
+
+    p{
+        padding: 1em 0;
+        line-height: 1.5em;
+        font-size: 1.2em;
+    }
+
+    .header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .delete{
+        color: red;
+    }
+</style>
+
+<section>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h1 class="title">{{blog.title}}</h1>
+                <small>Author: {{blog.author}}</small>
+            </div>
+            <div>
+            <a href={{blog.deleteLink}} class="delete">
+                Delete
+            </a>
+            <a href={{blog.updateLink}}>
+                Update
+            </a>
+
+            </div>
+        </div>
+        <p>
+            {{blog.content}}
+        </p>
+        <small>Published at: {{blog.created}}</small>
+    </div>
+    <div>
+        <a href="/blog">
+        Return 
+        </a>
+    </div>
+</section>

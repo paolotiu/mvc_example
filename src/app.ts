@@ -1,10 +1,10 @@
 import express, { NextFunction, Request, Response } from "express";
 import createError from "http-errors";
-
+import path from "path";
 const app = express();
 
 // Import routes
-import IndexRouter from "./routes";
+import BlogRouter from "./routes/blogRouter";
 
 // Mongoose setup
 import "config/mongooseSetup";
@@ -13,8 +13,12 @@ import "config/mongooseSetup";
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Setup view engine
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+
 // Setup routes
-app.use("/", IndexRouter);
+app.use("/blog", BlogRouter.getRouter());
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

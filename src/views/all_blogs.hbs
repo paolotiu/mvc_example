@@ -1,0 +1,42 @@
+<style>
+    .container{
+        padding: 1em;
+        max-width: 400px;
+    }
+    .title{
+        padding: .4em 0;
+    }
+
+    small{
+        color: gray
+    }
+
+    p{
+        padding: 1em 0;
+        line-height: 1.2em;
+    }
+</style>
+
+<section>
+    <div class="container">
+        <a href="/blog/add">
+        Add A blog
+        </a>
+    </div>
+    
+   {{#each blogs}}
+   <div class="container">
+       <h1 class="title">
+            {{this.title}}
+        </h1>
+        <small> By: {{this.author}}</small>
+        <p>
+            {{this.content}}
+        </p>
+        <small>Created at: {{this.created}}</small>
+        <a href={{this.link}}>
+            Go to full blog 
+        </a>
+   </div>
+   {{/each}}
+</section>
